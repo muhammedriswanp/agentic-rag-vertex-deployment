@@ -1,3 +1,10 @@
+.env
+.venv
+2026-08-31_19-56-30_Claude_Chat_Needs_input_—_Vertex_AI_managed_endpoints_deployment_-_Claud.md
+__pycache__
+*.pyc
+chroma_db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
