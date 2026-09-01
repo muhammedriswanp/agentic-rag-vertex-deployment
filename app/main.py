@@ -4,7 +4,7 @@ import uuid
 import  json
 import logging
 from fastapi import FastAPI, Request
-from retriever import retrieve_chunks
+from app.retriever import retrieve_chunks
 from app.config import validate_config
 from app.generator import get_llm, evaluate_context, reformulate_query, generate_answer
 
@@ -39,7 +39,7 @@ def health():
 
 @app.post("/predict")
 async def predict(request: Request):
-    request_id = str(uuid.uuid4)
+    request_id = str(uuid.uuid4())
     body = await request.json()
 
     instances = body.get("instances", [])
